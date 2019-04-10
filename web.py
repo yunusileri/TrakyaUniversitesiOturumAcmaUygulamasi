@@ -1,6 +1,8 @@
 from selenium import webdriver
-import time, datetime
+import time
+import datetime
 import requests
+import os
 
 user_name = ''
 user_pwd = ''
@@ -23,8 +25,11 @@ def user():
 
 def Baglan():
     global user_name, user_pwd
-    user()
-    driver_path = r'/Users/mac16/Desktop/chromedriver'
+    if os.name == 'nt':
+        driver_path = r'chromedriver.exe'
+    else:
+        driver_path = 'chromedriver'
+
     browser = webdriver.Chrome(executable_path=driver_path)
     time.sleep(2)
     browser.get('https://www.haberturk.com')
@@ -49,11 +54,18 @@ def Baglan():
 
 def Baglanti_Kontrol():
     MyUrl = 'https://github.com/'
+    user()
     try:
         req = requests.get(MyUrl)
-        file = open('Log.txt', 'a')
-        file.write(f'Baglanti Acik {datetime.datetime.now()}\n')
-        print(f'Baglanti Acik {datetime.datetime.now()}\n')
+        if req.status_code == 200:
+            file = open('Log.txt', 'a')
+            file.write(f'Baglanti Acik {datetime.datetime.now()}\n')
+            print(f'Baglanti Acik {datetime.datetime.now()}\n')
+        else:
+            file = open('Log.txt', 'a')
+            file.write(f'Baglanti Yok {datetime.datetime.now()}\n')
+            print(f'Baglantı Yok {datetime.datetime.now()}\n')
+            return Baglan()
     except:
         file = open('Log.txt', 'a')
         file.write(f'Baglanti Yok {datetime.datetime.now()}\n')
