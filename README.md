@@ -1,19 +1,19 @@
 # TrakyaUniversitesiOturumAcmaUygulaması
 
-# Kurulum için
+# Kurulum
 
         pip install virtualenv 
         virtualenv venv
 
-macOs and Linux
-            source venv/bin/activate
-
-windows
-            venv\Scripth\activate
+# macOs and Linux
+       source venv/bin/activate
+        pip install -r requirements.txt
+# windows
+        venv\Scripth\activate
+        pip install -r requirements.txt
 
 
         
-        pip install -r requirements.txt
-
+        
 #   Çalıştırmak için
         python web.py
