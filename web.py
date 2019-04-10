@@ -49,7 +49,7 @@ def Baglan():
     file = open('Log.txt', 'a')
     file.write(f'Baglanti Acildi {datetime.datetime.now()}\n\n')
     print(f'Baglanti Acildi {datetime.datetime.now()}\n\n')
-
+    file.close()
     browser.close()
 
 
@@ -62,15 +62,18 @@ def Baglanti_Kontrol():
             file = open('Log.txt', 'a')
             file.write(f'Baglanti Acik {datetime.datetime.now()}\n')
             print(f'Baglanti Acik {datetime.datetime.now()}\n')
+            file.close()
         else:
             file = open('Log.txt', 'a')
             file.write(f'Baglanti Yok {datetime.datetime.now()}\n')
             print(f'Baglantı Yok {datetime.datetime.now()}\n')
+            file.close()
             return Baglan()
     except:
         file = open('Log.txt', 'a')
         file.write(f'Baglanti Yok {datetime.datetime.now()}\n')
         print(f'Baglantı Yok {datetime.datetime.now()}\n')
+        file.close()
         return Baglan()
 
 
