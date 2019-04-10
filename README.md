@@ -2,17 +2,18 @@
 
 # Kurulum için
 
-pip install virtualenv 
-virtualenv venv
+        pip install virtualenv 
+        virtualenv venv
 
-    macOs and Linux
-source venv/bin/activate
+macOs and Linux
+            source venv/bin/activate
 
-     windows
-venv\Scripth\activate
+windows
+            venv\Scripth\activate
 
 
-pip install -r requirements.txt
+        
+        pip install -r requirements.txt
 
-#Çalıştırmak için
-python web.py
+#   Çalıştırmak için
+        python web.py
