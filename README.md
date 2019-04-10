@@ -5,10 +5,10 @@
 pip install virtualenv 
 virtualenv venv
 
-# macOs and Linux
+    macOs and Linux
 source venv/bin/activate
 
-# windows
+     windows
 venv\Scripth\activate
 
 
