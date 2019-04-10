@@ -29,7 +29,7 @@ def Baglan():
     if os.name == 'nt':
         driver_path = r'chromedriver.exe'
     else:
-        driver_path = 'chromedriver'
+        driver_path = r'./chromedriver'
 
     browser = webdriver.Chrome(executable_path=driver_path)
     time.sleep(2)
