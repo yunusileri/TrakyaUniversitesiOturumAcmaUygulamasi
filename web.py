@@ -14,6 +14,7 @@ def user():
         file = open('user.txt', 'r')
         a = file.read()
         user_name, user_pwd = a.split('\n')
+        file.close()
         #   print(user_name, user_pwd)
     except IOError:
         user_name = input('Kullanıcı adinizi giriniz.\n')
