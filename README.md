@@ -6,8 +6,8 @@
         virtualenv venv
 
 # macOs and Linux
-       source venv/bin/activate
-        pip install -r requirements.txt
+ source venv/bin/activate
+ pip install -r requirements.txt
 # windows
         venv\Scripth\activate
         pip install -r requirements.txt
