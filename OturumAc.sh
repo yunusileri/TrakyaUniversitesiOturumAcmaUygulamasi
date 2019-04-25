@@ -1,0 +1,2 @@
+source /Users/mac16/Desktop/yunusileri/TrakyaUniversitesiOturumAcmaUygulamasi/venv/bin/activate
+python /Users/mac16/Desktop/yunusileri/TrakyaUniversitesiOturumAcmaUygulamasi/web.py
