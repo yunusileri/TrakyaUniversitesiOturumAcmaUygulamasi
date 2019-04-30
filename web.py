@@ -3,7 +3,9 @@ import time
 import datetime
 import requests
 import os
-
+"""
+kullanici adi ve parola girilmeli
+"""
 user_name = ''
 user_pwd = ''
 
